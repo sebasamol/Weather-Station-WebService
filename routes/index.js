@@ -1,9 +1,9 @@
 var express = require('express');
+var mongoose = require('mongoose');
 var router = express.Router();
-const User = require("../models/user");
 
-const login = 'admin';
-const password = '123';
+const Users = require("../models/users");
+
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -14,14 +14,17 @@ router.get('/login', function(req, res) {
   res.render('login');
 });
 
-router.post('/login', function(req, res) {
-  const body = req.body;
-  if(body.login === login && body.password === password){
-    res.redirect('/');
-  }else {
-    res.redirect('/login');
+router.post('/login', async function(req, res) {
+  
+  const user = await Users.exists({login: req.body.login, pwd: req.body.pwd}).exec();
+  console.log(user);
+
+  if (user) {
+    res.redirect("/");
+  } else {
+    
+    res.status(400).send("Invalid username or password");
   }
-  res.redirect('/login');
 
 });
 

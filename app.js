@@ -1,11 +1,12 @@
 var createError = require('http-errors');
 var cookieSession = require('cookie-session');
 var express = require('express');
+var mongoose = require('mongoose');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var config = require('./config');
-var mongoose = require('mongoose');
+
 
 mongoose.connect(config.db, {useNewUrlParser: true});
 
@@ -18,6 +19,7 @@ db.once('open', function (){
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
+var registerRouter = require('./routes/register');
 
 var app = express();
 
@@ -39,6 +41,7 @@ app.use(cookieSession({
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
+app.use('/register', registerRouter);
 
 
 // catch 404 and forward to error handler
