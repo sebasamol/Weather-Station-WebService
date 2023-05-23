@@ -6,3 +6,37 @@ body {
 a {
   color: #00B7FF;
 }
+
+.container {
+  display: flex;
+}
+
+
+.first-city{
+  height: 600px;
+  width: 800px;
+  text-align: center;
+  border-style: solid;
+  cursor:pointer;
+}
+
+.first-city:hover{
+  background: green;
+  transition: background-color 400ms ease-out 100ms;
+  
+}
+
+.second-city{
+  height: 600px;
+  width: 800px;
+  text-align: center;
+  margin-left: 2px;
+  border-style: solid;
+  cursor:pointer;
+
+}
+.second-city:hover{
+  background: green;
+  transition: background-color 400ms ease-out 100ms;
+}
+

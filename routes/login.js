@@ -6,8 +6,7 @@ const User = require('../models/users');
 router.get('/', function(req, res) {
   
   res.render('login', { title: 'Strona logowania' });
-  //res.redirect('index');
-
+  
 });
 
 

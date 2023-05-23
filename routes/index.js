@@ -2,8 +2,15 @@ var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
 
+
 const Users = require("../models/users");
 
+router.all('*', (req, res, next) =>{
+  if(!req.session.index){
+    res.redirect('login');
+  }
+  next();
+});
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -22,7 +29,7 @@ router.post('/login', async function(req, res) {
   if (user) {
     res.redirect("/");
   } else {
-    
+
     res.status(400).send("Invalid username or password");
   }
 
