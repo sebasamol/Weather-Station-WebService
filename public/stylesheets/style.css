@@ -7,36 +7,63 @@ a {
   color: #00B7FF;
 }
 
+
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+}
+
 .container {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border: solid black;
 }
-
-
-.first-city{
-  height: 600px;
-  width: 800px;
-  text-align: center;
-  border-style: solid;
-  cursor:pointer;
-}
-
-.first-city:hover{
-  background: green;
-  transition: background-color 400ms ease-out 100ms;
+.city {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: auto;
+  border: solid black;
+  padding: 2px;
+  grid-template-areas: 
+    "header header header "
+    "main main1 main2 "
+    "main3 main4 main5"
   
 }
-
-.second-city{
-  height: 600px;
-  width: 800px;
-  text-align: center;
-  margin-left: 2px;
-  border-style: solid;
-  cursor:pointer;
-
+.city:hover{
+  transition: all 1s ease;
+  background-color: aqua;
 }
-.second-city:hover{
-  background: green;
-  transition: background-color 400ms ease-out 100ms;
+
+.item-a {
+  text-align: center;
+  grid-area: header;
+}
+.item-b {
+  text-align: center;
+  grid-area: main;
+}
+.item-c {
+  text-align: center;
+  grid-area: main1;
+}
+.item-d {
+  text-align: center;
+  grid-area: main2;
+}
+.item-e {
+  text-align: center;
+  grid-area: main3;
+}
+.item-f {
+  text-align: center;
+  grid-area: main4;
+}
+.item-g {
+  text-align: center;
+  grid-area: main5;
 }
 

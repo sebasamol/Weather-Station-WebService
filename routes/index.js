@@ -5,12 +5,12 @@ var router = express.Router();
 
 const Users = require("../models/users");
 
-router.all('*', (req, res, next) =>{
-  if(!req.session.index){
-    res.redirect('login');
-  }
-  next();
-});
+// router.all('*', (req, res, next) =>{
+//   if(!req.session.index){
+//     res.redirect('login');
+//   }
+//   next();
+// });
 
 /* GET home page. */
 router.get('/', function(req, res) {
