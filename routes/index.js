@@ -13,11 +13,8 @@ const Users = require("../models/users");
 
 /* GET home page. */
 router.get('/', async function(req, res) {
-  //res.render('index', { title: 'Stacja pogodowa', time: actual});
 
   const url = 'http://worldtimeapi.org/api/ip'
-  
-
   fetch(url)
     .then(res => res.json())
     .then(json =>{
@@ -33,10 +30,6 @@ router.get('/', async function(req, res) {
     })
     .catch(err => console.error('error:' + err))
     
-    
-  
-  
-   
 });
 
 router.get('/login', function(req, res) {

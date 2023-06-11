@@ -1,3 +1,4 @@
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -12,58 +13,54 @@ a {
 h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
+  text-align: center;
+
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: 600px;
+  width: 900px;
   border: solid black;
 }
 .city {
-  display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
+  
+  height: 400px;
+  width: 500px;
+  
+
   border: solid black;
   padding: 2px;
-  grid-template-areas: 
-    "header header header "
-    "main main1 main2 "
-    "main3 main4 main5"
   
 }
-.city:hover{
-  transition: all 1s ease;
-  background-color: aqua;
+.inside{
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+  
+  justify-content: center;
+  
+}
+.outside{
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+  justify-content: center;
+  
+  
+  
 }
 
-.item-a {
-  text-align: center;
-  grid-area: header;
+.city:hover{
+  transition: all 1s ease;
+  background-color: rgb(225, 225, 105);
 }
-.item-b {
-  text-align: center;
-  grid-area: main;
-}
-.item-c {
-  text-align: center;
-  grid-area: main1;
-}
-.item-d {
-  text-align: center;
-  grid-area: main2;
-}
-.item-e {
-  text-align: center;
-  grid-area: main3;
-}
-.item-f {
-  text-align: center;
-  grid-area: main4;
-}
-.item-g {
-  text-align: center;
-  grid-area: main5;
-}
+
+
+
 
