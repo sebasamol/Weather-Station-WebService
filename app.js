@@ -8,6 +8,7 @@ var logger = require('morgan');
 var config = require('./config');
 
 
+
 mongoose.connect(config.db, {useNewUrlParser: true});
 
 var db = mongoose.connection;
