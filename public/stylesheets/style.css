@@ -24,7 +24,7 @@ h2 {
   margin-left: auto;
   align-items: center;
   /* justify-content: center; */
-  height: 1200px;
+  height: 1800px;
   width: 1800px;
   border: solid black;
 }
@@ -41,16 +41,12 @@ h2 {
 .inside{
   display: flex;
   flex-direction: row;
-  gap: 1.4em;
-  
   justify-content: center;
-  
+  margin-top: 50px;
 }
 .outside{
   display: flex;
   flex-direction: row;
-  
-  gap: 1.4em;
   justify-content: center;
   
   
@@ -62,11 +58,8 @@ h2 {
   background-color: rgb(225, 225, 105);
 } */
 canvas{
-  height: 180px !important;
-  width: 360px !important;
+  height: 400px !important;
+  width: 400px !important;
   
 }
-
-
-
 

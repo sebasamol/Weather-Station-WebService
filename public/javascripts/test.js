@@ -1,13 +1,12 @@
-const data = {
-    labels: false,
+ const data = {
+    labels: ['Mon', 'Tue', 'Wed'],
     datasets: [{
-      label: false,
-      data: [30, 7.5, 7.5, 15],
+      label: 'Weekly Sales',
+      data: [30, 0, 30],
       backgroundColor: [
-        'rgba(0, 0, 255, 1)',
-        'rgba(60, 179, 113, 1)',
-        'rgba(255, 165, 0, 1)',
-        'rgba(255, 0, 0, 1)'
+        'rgba(255, 26, 104, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)'
         
       ],
       borderColor: [
@@ -15,7 +14,7 @@ const data = {
         'rgba(255, 206, 86, 1)',
         'rgba(75, 192, 192, 1)'
       ],
-      needleValue: 10,
+      needleValue: 0,
       borderWidth: 4,
       borderColor: 'white',
       cutout: '90%',
@@ -91,8 +90,12 @@ const data = {
 
   // render init block
   const myChart = new Chart(
-    document.getElementById('tempChart'),
+    document.getElementById('myChart'),
     
     config
   );
 
+const wykres = new Chart(
+    document.getElementById('wykres'),
+    config
+)

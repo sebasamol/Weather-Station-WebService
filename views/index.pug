@@ -8,11 +8,12 @@ block content
   
     script(type='module' src='/public/javascripts/graphs-pn.js')
     
+    
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     
     
-  //canvas(id='temp')
+  
   body
     
     div(class='params')
@@ -25,28 +26,23 @@ block content
       div(class='city')
         h2 Poznań
         div(class='outside')
-          canvas(id='temp-out-pn')
-          canvas(id='hum-out-pn')
-          canvas(id='press-out-pn')
-          
-          
+          canvas(id='tempChart')
           
         div(class='inside')
           
-          canvas(id='temp-in-pn')
-          canvas(id='hum-in-pn')
+        
+          canvas(id='wykres')
           
           
         
           
       div(class='city')
         h2 Międzyrzecz
-        div(class='inside')
+        
+        canvas(id='myChart')
+        
 
-        div(class='outside')
-
-          p(class='item-h') wilgotność
-          p(class='item-i') ciśnienie
+         
 
   
         

@@ -1,9 +1,13 @@
-extends layout
+//extends layout
 
 block content
     head
         h1= title
         p Witaj na stronie logowania
+        script(src='https://cdn.jsdelivr.net/npm/chart.js')
+  
+        script(type='module' src='/public/javascripts/graphs-pn.js')
+        script(type='module' src='/public/javascripts/test.js')
         
     body 
     form(method='post')
@@ -15,4 +19,9 @@ block content
             input(type='password' name='pwd' required)
         p
             input(type='submit' value='Zaloguj' required)
+   
         
+    div(class="test")
+        canvas(id='myChart')
+    div(class="test")
+        canvas(id='wykres')
