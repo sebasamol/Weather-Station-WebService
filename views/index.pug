@@ -5,13 +5,14 @@ block content
     h2= title
     script(src='https://kit.fontawesome.com/abd674511e.js')
     script(src='https://cdn.jsdelivr.net/npm/chart.js')
-    script(type='module' src='/public/javascripts/temp-graph.js')
+  
+    script(type='module' src='/public/javascripts/graphs-pn.js')
     
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     
     
-  canvas(id='temp')
+  //canvas(id='temp')
   body
     
     div(class='params')
@@ -23,7 +24,17 @@ block content
      
       div(class='city')
         h2 Poznań
+        div(class='outside')
+          canvas(id='temp-out-pn')
+          canvas(id='hum-out-pn')
+          canvas(id='press-out-pn')
+          
+          
+          
         div(class='inside')
+          
+          canvas(id='temp-in-pn')
+          canvas(id='hum-in-pn')
           
           
         
@@ -32,13 +43,8 @@ block content
         h2 Międzyrzecz
         div(class='inside')
 
-          p(class='item-c') 25*C
-          p(class='item-d') 40%  
-          p(class='item-e') 1000 hPa 
-
         div(class='outside')
 
-          p(class='item-g') temperatura
           p(class='item-h') wilgotność
           p(class='item-i') ciśnienie
 
