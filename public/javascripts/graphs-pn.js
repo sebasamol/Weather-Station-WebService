@@ -2,7 +2,7 @@ const data = {
     labels: false,
     datasets: [{
       label: false,
-      data: [30, 7.5, 7.5, 15],
+      data: [40, 15, 15,10],
       backgroundColor: [
         'rgba(0, 0, 255, 1)',
         'rgba(60, 179, 113, 1)',
@@ -15,13 +15,15 @@ const data = {
         'rgba(255, 206, 86, 1)',
         'rgba(75, 192, 192, 1)'
       ],
-      needleValue: 10,
+      needleValue: 30,
+      // 0 to -30 *C
+      //
       borderWidth: 4,
       borderColor: 'white',
       cutout: '90%',
       circumference: 180,
       rotation: 270,
-      borderRadius: 5,
+      borderRadius: 8,
     }]
   };
   // gaugeNeedle block
@@ -33,9 +35,14 @@ const data = {
         
 
         const needleValue = data.datasets[0].needleValue;
-        const dataTotal = data.datasets[0].data.reduce((a, b) => a + b, 0);
-        const angle = Math.PI + (1 / dataTotal * needleValue * Math.PI);
-
+        const dataTotal = data.datasets[0].data.reduce((a, b) => a + b,0);
+        //należy zmienić wzór dla zmiennej angle
+        const angle =  Math.PI + ( 1 / dataTotal * needleValue * Math.PI) + Math.PI/2  ;
+      
+        //od PI - 180 st do 360 
+        console.log('needle value',needleValue);
+        console.log('data total',dataTotal);
+        console.log('angle',angle);
         const cx = width / 2;
         const cy = chart._metasets[0].data[0].y;
 
@@ -59,7 +66,7 @@ const data = {
         //text fill
         ctx.font = '50px Helvetica';
         ctx.fillStyle = '#444';
-        ctx.fillText(needleValue , cx, cy + 50 );
+        ctx.fillText(needleValue + '*C' , cx, cy + 50 );
         ctx.textAlign = 'center';
         ctx.restore();
     }
