@@ -3,10 +3,14 @@ extends layout
 block content
   head
     h2= title
+    
     script(src='https://kit.fontawesome.com/abd674511e.js')
-    script(src='https://cdn.jsdelivr.net/npm/chart.js')
-  
-    script(type='module' src='/public/javascripts/graphs-pn.js')
+    script( src='https://cdn.jsdelivr.net/npm/chart.js@4.3.0')
+
+    //Graphs
+    script(type='module' src='/public/javascripts/graphs-pn-out.js')
+    script(type='module' src='/public/javascripts/graphs-pn-in.js')
+    
     
     
     meta(charset='utf-8')
@@ -26,20 +30,26 @@ block content
       div(class='city')
         h2 Poznań
         div(class='outside')
-          canvas(id='tempChart')
+          canvas(id='temp-pn-out')
+          canvas(id='hum-pn-out')
+          canvas(id='press-pn-out')
+          
           
         div(class='inside')
+          canvas(id='temp-pn-in')
+          canvas(id='hum-pn-in')
+          
+        div(class='city')
+          h2 Międzyrzecz
+          div(class='outside')
+          
+          
           
         
-          canvas(id='wykres')
           
-          
+      
         
-          
-      div(class='city')
-        h2 Międzyrzecz
         
-        canvas(id='myChart')
         
 
          
