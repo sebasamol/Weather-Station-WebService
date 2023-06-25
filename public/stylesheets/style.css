@@ -19,47 +19,75 @@ h2 {
 
 .container {
   display: flex;
-  flex-direction: column;
-  margin-right: auto;
-  margin-left: auto;
+  justify-content: center;
+  flex-direction: row;  
   align-items: center;
-  /* justify-content: center; */
-  height: 1800px;
+  height: 650px;
   width: 1800px;
   border: solid black;
 }
 .city {
   display: flex;
-  flex-direction: column;
-
-  height: 1200px;
-  width: 1400px;
+  flex-direction: row;
+  height: 600px;
+  width: 800px;
   border: solid black;
   padding: 2px;
   
+  justify-content: center;
+  
+}
+.location{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
 }
 .inside{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 50px;
+  flex-direction: column;
+  border: solid black;
+  height: 300px;
+  width: 300px;
+  
+  
 }
 .outside{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  
+  flex-direction: column;
+  border: solid black;
+  height: 300px;
+  width: 300px;
   
   
 }
+.params-wth{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  border: solid black;
+  justify-content: center;
+  align-items: center;
+  
+}
+#place{
+  text-align: center;
+  justify-content: center;
+}
+.alerts{
+  display: flex;
+  flex-direction: column;
+  border: solid black;
+}
+
 
 /* .city:hover{
   transition: all 1s ease;
   background-color: rgb(225, 225, 105);
 } */
-canvas{
+/* canvas{
   height: 300px !important;
   width: 300px !important;
+  padding: 5px;
   
-}
+} */
 

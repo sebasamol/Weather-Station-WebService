@@ -26,22 +26,33 @@ block content
       p Aktualna godzina #{time}
       p Dziś jest #{day} dzień tygodnia, #{week} tydzień roku,  #{year} dzień roku
     div(class='container')
-     
+      
       div(class='city')
-        h2 Poznań
+        div(class='alerts')
+          p(id='place') Poznań
+          div(class='location')
+
+            div(class='outside')
+              p(id='place') Na zewnątrz
+              div(class='params-wth')
+                p 25 *C
+              div(class='params-wth')
+                p 55% hPa
+              div(class='params-wth')
+                p 1000 hPa
+
+            div(class='inside')  
+              p(id='place') W domu
+              div(class='params-wth')
+                p 25 *C
+              div(class='params-wth')
+                p 55% hPa
+              div(class='params-wth')
+                p 1000 hPa
+ 
+      div(class='city')
+        
         div(class='outside')
-          canvas(id='temp-pn-out')
-          canvas(id='hum-pn-out')
-          canvas(id='press-pn-out')
-          
-          
-        div(class='inside')
-          canvas(id='temp-pn-in')
-          canvas(id='hum-pn-in')
-          
-        div(class='city')
-          h2 Międzyrzecz
-          div(class='outside')
           
           
           

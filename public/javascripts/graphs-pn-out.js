@@ -64,9 +64,9 @@ const data = {
         ctx.restore();
 
         //text fill
-        ctx.font = '50px Helvetica';
+        ctx.font = '25px Helvetica';
         ctx.fillStyle = '#444';
-        ctx.fillText(needleValue + '*C' , cx, cy + 50 );
+        ctx.fillText(needleValue + '*C' , cx, cy + 25 );
         ctx.textAlign = 'center';
         ctx.restore();
     }
@@ -109,7 +109,7 @@ const dataHum = {
   labels: false,
   datasets: [{
     label: false,
-    data: [40, 15, 15,10],
+    data: [100],
     backgroundColor: [
       'rgba(0, 0, 255, 1)',
       'rgba(60, 179, 113, 1)',
@@ -122,7 +122,7 @@ const dataHum = {
       'rgba(255, 206, 86, 1)',
       'rgba(75, 192, 192, 1)'
     ],
-    needleValue: 14,
+    needleValue: 80,
     // 0 to -30 *C
     //
     borderWidth: '2',
@@ -137,14 +137,14 @@ const dataHum = {
 const gaugeNeedleHum = {
   id: 'gaugeNeedleHum',
   afterDatasetDraw(chart, args, options) {
-      const { ctx, config, data, chartArea: {top, bottom, left, right, width, height } } = chart;
+      const { ctx, config, dataHum, chartArea: {top, bottom, left, right, width, height } } = chart;
       ctx.save();
       
 
       const needleValue = dataHum.datasets[0].needleValue;
-      const dataTotal = dataHum.datasets[0].data.reduce((a, b) => a + b,0);
+      const dataTotal = dataHum.datasets[0].data.reduce((a, b) => a + b, 0);
       //należy zmienić wzór dla zmiennej angle
-      const angle =  Math.PI + ( 1 / dataTotal * needleValue * Math.PI) + Math.PI/2  ;
+      const angle =  Math.PI + ( 1 / dataTotal * needleValue * Math.PI)  ;
     
       //od PI - 180 st do 360 
       
@@ -169,9 +169,9 @@ const gaugeNeedleHum = {
       ctx.restore();
 
       //text fill
-      ctx.font = '50px Helvetica';
+      ctx.font = '25px Helvetica';
       ctx.fillStyle = '#444';
-      ctx.fillText(needleValue + '*C' , cx, cy + 50 );
+      ctx.fillText(needleValue + '%' , cx, cy + 25 );
       ctx.textAlign = 'center';
       ctx.restore();
   }
@@ -181,7 +181,7 @@ const gaugeNeedleHum = {
 // config 
 const configHum = {
   type: 'doughnut',
-  data,
+  dataHum,
   options: {
 
       events: ["mouseout", "click", "touchstart", "touchmove", "touchend"],
@@ -274,9 +274,9 @@ const gaugeNeedlePress = {
       ctx.restore();
 
       //text fill
-      ctx.font = '50px Helvetica';
+      ctx.font = '25px Helvetica';
       ctx.fillStyle = '#444';
-      ctx.fillText(needleValue + '*C' , cx, cy + 50 );
+      ctx.fillText(needleValue + ' hPa' , cx, cy + 25 );
       ctx.textAlign = 'center';
       ctx.restore();
   }
