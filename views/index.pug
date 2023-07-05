@@ -20,39 +20,87 @@ block content
   
   body
     
-    div(class='params')
-      
-
-      p Aktualna godzina #{time}
-      p Dziś jest #{day} dzień tygodnia, #{week} tydzień roku,  #{year} dzień roku
     div(class='container')
       
       div(class='city')
+        h2 Poznań
+        div(class='city-params')
+          
+          div(class='read-sensor')
+            div(class='opis')
+              h2 Na zewnątrz
+            div(class='params-sensor')
+              img(src='/public/images/temperature.png' alt='')
+              p(id='sensor') 25*C
+            div(class='params-sensor')  
+              img(src='/public/images/humidity.png' alt='')
+              p(id='sensor') 50%
+            div(class='params-sensor')
+              img(src='/public/images/barometer.png' alt='')
+              p(id='sensor') 1000hPa
+            
+          div(class='read-sensor')
+            div(class='opis')
+              h2 W mieszkaniu
+            div(class='params-sensor')
+              img(src='/public/images/temperature.png' alt='')
+              p(id='sensor') 25*C
+            div(class='params-sensor')  
+              img(src='/public/images/humidity.png' alt='')
+              p(id='sensor') 50%
+            
         div(class='alerts')
-          p(id='place') Poznań
-          div(class='location')
-
-            div(class='outside')
-              p(id='place') Na zewnątrz
-              div(class='params-wth')
-                p 25 *C
-              div(class='params-wth')
-                p 55% hPa
-              div(class='params-wth')
-                p 1000 hPa
-
-            div(class='inside')  
-              p(id='place') W domu
-              div(class='params-wth')
-                p 25 *C
-              div(class='params-wth')
-                p 55% hPa
-              div(class='params-wth')
-                p 1000 hPa
- 
+            img(src='/public/images/alert.png' alt='')
+            p Uwaga 
+        div(class='statistics')
+          button Więcej informacji
       div(class='city')
+        h2 Międzyrzecz
+        div(class='city-params')
+          
+          div(class='read-sensor')
+            p 12334
+            p 12334
+            p 12334
+          div(class='read-sensor')
+            p 12334
+            p 12334
+            p 12334
+        div(class='alerts')
+            p Uwaga 
+      
+  
+       
+      //-   div(class='location')
+      //-     div(class='outside')
+      //-       p(id='place') Na zewnątrz
+      //-       div(class='params-wth')
+      //-         img(src='/public/images/temperature.png' alt='')
+      //-         p(id='') 25*C
+      //-       div(class='params-wth')
+      //-         img(src='/public/images/humidity.png' alt='')
+      //-         p(id='') 55% 
+      //-       div(class='params-wth')
+      //-         img(src='/public/images/barometer.png' alt='')
+      //-         p(id='') 1000 hPa
+
+           
+      //-       p(id='place') W domu
+      //-       div(class='params-wth')
+      //-         img(src='/public/images/temperature.png' alt='')
+      //-         p(id='') 25*C
+      //-       div(class='params-wth')
+      //-         img(src='/public/images/humidity.png' alt='')
+      //-         p(id='') 55% 
+      //-       div(class='params-wth')
+      //-         img(src='/public/images/barometer.png' alt='')
+      //-         p(id='') 1000hPa
+      //-       div(class='alerts')
+      //-         p 123
+          
+      //- div(class='city')
         
-        div(class='outside')
+      //-   div(class='outside')
           
           
           

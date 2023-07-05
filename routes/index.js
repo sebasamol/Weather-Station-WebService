@@ -13,22 +13,23 @@ const Users = require("../models/users");
 
 /* GET home page. */
 router.get('/', async function(req, res) {
+  res.render('index', { title: 'Stacja pogodowa' });
 
-  const url = 'http://worldtimeapi.org/api/ip'
-  fetch(url)
-    .then(res => res.json())
-    .then(json =>{
-      //console.log(json.day_of_week);
-      //console.log(json.day_of_year);
-      res.render('index', {
-        title: 'Stacja pogodowa',
-        time: json.datetime,
-        day: json.day_of_week,
-        year: json.day_of_year,
-        week: json.week_number
-      });
-    })
-    .catch(err => console.error('error:' + err))
+  // const url = 'http://worldtimeapi.org/api/ip'
+  // fetch(url)
+  //   .then(res => res.json())
+  //   .then(json =>{
+  //     //console.log(json.day_of_week);
+  //     //console.log(json.day_of_year);
+  //     res.render('index', {
+  //       title: 'Stacja pogodowa',
+  //       time: json.datetime,
+  //       day: json.day_of_week,
+  //       year: json.day_of_year,
+  //       week: json.week_number
+  //     });
+  //   })
+  //   .catch(err => console.error('error:' + err))
     
 });
 
