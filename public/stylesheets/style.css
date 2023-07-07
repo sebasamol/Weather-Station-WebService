@@ -1,7 +1,6 @@
 
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
 }
 
 a {
@@ -10,7 +9,7 @@ a {
 
 
 
-h2 {
+h4 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
   text-align: center;
@@ -20,7 +19,7 @@ h2 {
 .container {
   display: flex;
   flex-direction: row;
-  height: 700px;
+  height: 1000px;
   width: 1650px;
   
   border: solid black;
@@ -42,7 +41,8 @@ h2 {
 .read-sensor{
   display: flex;
   flex-direction: column;
-  height: 400px;
+  align-items: center;
+  height: 330px;
   width: 700px;
   margin-top: 5px;
   padding: 5px;
@@ -51,8 +51,7 @@ h2 {
 .params-sensor{
   display: flex;
   flex-direction: row;
-  
-  
+  width: 200px;
   padding: 10px;
 }
 .forecast-weather{
@@ -65,7 +64,7 @@ h2 {
   margin-top: 5px;
 }
 #sensor{
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-left: 10px;
 }

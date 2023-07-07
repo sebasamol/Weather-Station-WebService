@@ -13,23 +13,29 @@ const Users = require("../models/users");
 
 /* GET home page. */
 router.get('/', async function(req, res) {
-  res.render('index', { title: 'Stacja pogodowa' });
+  // res.render('index', { title: 'Stacja pogodowa' });
 
-  // const url = 'http://worldtimeapi.org/api/ip'
-  // fetch(url)
-  //   .then(res => res.json())
-  //   .then(json =>{
-  //     //console.log(json.day_of_week);
-  //     //console.log(json.day_of_year);
-  //     res.render('index', {
-  //       title: 'Stacja pogodowa',
-  //       time: json.datetime,
-  //       day: json.day_of_week,
-  //       year: json.day_of_year,
-  //       week: json.week_number
-  //     });
-  //   })
-  //   .catch(err => console.error('error:' + err))
+  const url = 'http://api.weatherapi.com/v1/current.json?key=a38b0c2762554ae5ab3185508230707&q=Poznan&aqi=yes'
+  fetch(url)
+    .then(res => res.json())
+    .then(json =>{
+      console.log('Prędkość wiatru',json.current.condition.icon);
+      console.log('Prędkość wiatru',json.current.wind_mph);
+      console.log('Odczuwalna temperatura',json.current.feelslike_c);
+      console.log('Indeks UV',json.current.uv);
+      console.log('NO2',json.current.air_quality.no2);
+      console.log('O3',json.current.air_quality.o3);
+      console.log('PM2.5',json.current.air_quality.pm2_5);
+      console.log('PM10',json.current.air_quality.pm10);
+      res.render('index', {
+        title: 'Stacja pogodowa',
+        // time: json.datetime,
+        // day: json.day_of_week,
+        // year: json.day_of_year,
+        // week: json.week_number
+      });
+    })
+    .catch(err => console.error('error:' + err))
     
 });
 

@@ -2,7 +2,7 @@ extends layout
 
 block content
   head
-    h2= title
+    //h2= title
     
     script(src='https://kit.fontawesome.com/abd674511e.js')
     script( src='https://cdn.jsdelivr.net/npm/chart.js@4.3.0')
@@ -23,12 +23,12 @@ block content
     div(class='container')
       
       div(class='city')
-        h2 Poznań
+        h4 Poznań
         div(class='city-params')
           
           div(class='read-sensor')
             div(class='opis')
-              h2 Na zewnątrz
+              h4 Na zewnątrz
             div(class='params-sensor')
               img(src='/public/images/temperature.png' alt='')
               p(id='sensor') 25*C
@@ -41,7 +41,7 @@ block content
             
           div(class='read-sensor')
             div(class='opis')
-              h2 W mieszkaniu
+              h4 W mieszkaniu
             div(class='params-sensor')
               img(src='/public/images/temperature.png' alt='')
               p(id='sensor') 25*C
@@ -49,14 +49,17 @@ block content
               img(src='/public/images/humidity.png' alt='')
               p(id='sensor') 50%
         div(class='forecast-weather')
-          p Prognoza pogody  
+          p Słonecznie 
+          p Prędkość wiatru 
+          p Prędkość wiatru 
+          p Jakość powietrza 
         div(class='alerts')
             img(src='/public/images/alert.png' alt='')
             p Uwaga 
         div(class='statistics')
           button Więcej informacji
       div(class='city')
-        h2 Międzyrzecz
+        h4 Międzyrzecz
         div(class='city-params')
           
           div(class='read-sensor')
