@@ -48,10 +48,16 @@ block content
               img(src='/public/images/humidity.png' alt='')
               p(id='sensor') 50%
         div(class='forecast-weather')
-          p Słonecznie 
-          p Prędkość wiatru 
-          p Prędkość wiatru 
-          p Jakość powietrza 
+          div(class='api-params')
+            img(src= weatherIcon)
+            p(id='sensor') #{ctempPn}
+          div(class='api-params')
+            img(src='/public/images/windy.png' alt='')
+            p(id='sensor') #{windPn} km/h
+          div(class='api-params')
+            img(src='/public/images/uv.png' alt='')
+            p(id='sensor') #{uvPn}
+          
         div(class='alerts')
             img(src='/public/images/alert.png' alt='')
             p Uwaga 

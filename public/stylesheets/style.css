@@ -55,8 +55,19 @@ h4 {
   padding: 10px;
 }
 .forecast-weather{
-  border: solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 60px;
   margin-top: 5px;
+  border: solid black;
+  
+  
+}
+.api-params{
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 .alerts{
   display: flex;
@@ -66,7 +77,7 @@ h4 {
 #sensor{
   font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .statistics{
   border: solid black;
