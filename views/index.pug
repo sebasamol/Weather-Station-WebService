@@ -30,7 +30,7 @@ block content
               h4 Na zewnątrz
             div(class='params-sensor')
               img(src='/public/images/temperature.png' alt='')
-              p(id='sensor') 25*C
+              p(id='sensor') 25&#8451
             div(class='params-sensor')  
               img(src='/public/images/humidity.png' alt='')
               p(id='sensor') 50%
@@ -43,20 +43,20 @@ block content
               h4 W mieszkaniu
             div(class='params-sensor')
               img(src='/public/images/temperature.png' alt='')
-              p(id='sensor') 25*C
+              p(id='sensor') 25&#8451
             div(class='params-sensor')  
               img(src='/public/images/humidity.png' alt='')
               p(id='sensor') 50%
         div(class='forecast-weather')
           div(class='api-params')
             img(src= weatherIcon)
-            p(id='sensor') #{ctempPn}
+            p(id='sensor') #{ctempPn}&#8451
           div(class='api-params')
             img(src='/public/images/windy.png' alt='')
             p(id='sensor') #{windPn} km/h
           div(class='api-params')
             img(src='/public/images/uv.png' alt='')
-            p(id='sensor') #{uvPn}
+            p(id='sensor') #{uvPn} UV
           
         div(class='alerts')
             img(src='/public/images/alert.png' alt='')
